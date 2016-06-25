@@ -3,20 +3,25 @@
 
 
     
-    
-    
   <url>
-    <loc>http://blog.ctf826.com/2016/06/22/hello-world/</loc>
-    <lastmod>2016-06-22T08:54:56.000Z</lastmod>
+    <loc>http://blog.ctf826.com/2016/06/22/CoreData/</loc>
+    <lastmod>2016-06-25T09:50:09.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2016-06-22T08:54:56.000Z</pubTime>
+        <title>CoreData</title>
+        <pubTime>2016-06-22T07:42:27.000Z</pubTime>
         
+        <tag>iOS</tag>
+         
          
            
+             
+              <breadCrumb title="技术" url="http://blog.ctf826.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
         </display>
     </data>
     </url>
 
+    
+    
 </urlset>

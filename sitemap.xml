@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.ctf826.com/2016/06/22/CoreData/</loc>
+    
+    <lastmod>2016-06-25T09:50:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.ctf826.com/tags/index.html</loc>
     
     <lastmod>2016-06-25T05:25:00.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.ctf826.com/categories/index.html</loc>
     
     <lastmod>2016-06-25T05:24:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.ctf826.com/2016/06/22/hello-world/</loc>
-    
-    <lastmod>2016-06-22T08:54:56.000Z</lastmod>
     
   </url>
   
