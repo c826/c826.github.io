@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://blog.ctf826.com/images/14.pic_hd.jpg">
 <meta property="og:image" content="http://blog.ctf826.com/images/15.pic_hd.jpg">
 <meta property="og:image" content="http://blog.ctf826.com/images/16.pic_hd.jpg">
-<meta property="og:updated_time" content="2016-07-20T13:50:58.000Z">
+<meta property="og:updated_time" content="2016-07-20T13:57:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建基于jenkins+github+fir.im自动化集成环境">
 <meta name="twitter:description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。">
@@ -348,19 +348,17 @@
 
       
         <h1 id="自动集成环境介绍"><a href="#自动集成环境介绍" class="headerlink" title="自动集成环境介绍"></a>自动集成环境介绍</h1><p>在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。<br>翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。<br><a id="more"></a></p>
-<h3 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h3><blockquote>
+<h2 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h2><blockquote>
 <p>Jenkins是一个用Java编写的开源的持续集成工具。在与Oracle发生争执后，项目从Hudson项目复刻。<br>Jenkins提供了软件开发的持续集成服务。它运行在Servlet容器中（例如Apache Tomcat）。它支持软件配置管理（SCM）工具（包括AccuRev SCM、CVS、Subversion、Git、Perforce、Clearcase和和RTC），可以执行基于Apache Ant和Apache Maven的项目，以及任意的Shell脚本和Windows批处理命令。Jenkins的主要开发者是川口耕介。[2]Jenkins是在MIT许可证下发布的自由软件。[3]<br>可以通过各种手段触发构建。例如提交给版本控制系统时被触发，也可以通过类似Cron的机制调度，也可以在其他的构建已经完成时，还可以通过一个特定的URL进行请求。<br>来源—<a href="https://zh.wikipedia.org/wiki/Jenkins_(软件" target="_blank" rel="external">维基百科</a>)</p>
 </blockquote>
-<p>###github</p>
-<blockquote>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><blockquote>
 <p>GitHub是一个利用Git进行版本控制、专门用于存放软件代码与内容的共享虚拟主机服务。它由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。<br>GitHub同时提供付费账户和免费账户。这两种账户都可以建立公开的代码仓库，但是付费账户也可以建立私有的代码仓库。根据在2009年的Git用户调查，GitHub是最流行的Git存取站点。[2]除了允许个人和组织建立和存取代码库以外，它也提供了一些方便社会化软件开发的功能，包括允许用户追蹤其他用户、组织、软件库的动态，对软件代码的改动和bug提出评论等。GitHub也提供了图表功能，用于显示开发者们怎样在代码库上工作以及软件的开发活跃程度。<br>截止到2015年，GitHub已经有超过九百万注册用户和2110万代码库。[3]事实上已经成为了世界上最大的代码存放网站和开源社区。[4]<br>来源—<a href="https://zh.wikipedia.org/wiki/GitHub" target="_blank" rel="external">维基百科</a></p>
 </blockquote>
-<p>###fir.im</p>
-<blockquote>
+<h2 id="fir-im"><a href="#fir-im" class="headerlink" title="fir.im"></a>fir.im</h2><blockquote>
 <p>fir.im 为开发者提供测试应用极速发布，应用崩溃实时分析、用户反馈收集等一系列开发测试效率工具服务，帮助开发者将更多精力放在产品的开发与应用的优化上。<br>来源—<a href="https://fir.im" target="_blank" rel="external">维基百科</a></p>
 </blockquote>
 <p>#安装</p>
-<p>###jenkins安装<br>在网上各种教程中，Mac上 jenkins 安装具体有两种:</p>
+<h2 id="jenkins安装"><a href="#jenkins安装" class="headerlink" title="jenkins安装"></a>jenkins安装</h2><p>在网上各种教程中，Mac上 jenkins 安装具体有两种:</p>
 <ol>
 <li><p>官网直接下载 —-<a href="jenkins.io">网址</a></p>
 </li>
@@ -372,7 +370,7 @@
 <p>jenkins安装完成之后，可以通过<a href="http://localhost:8080" target="_blank" rel="external">浏览器</a>访问了。  </p>
 <p><img src="/images/WeChat_1468899662.jpeg" alt="WeChat_1468899662"></p>
 <p>(<del>~使用的为英文系统，所以界面也默认是英文。应该产生不了阅读障碍吧。。。。。。</del>~)</p>
-<p>###插件安装<br>插件安装方法： Manage Jenkins -&gt; Manage Plugins</p>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>插件安装方法： Manage Jenkins -&gt; Manage Plugins</p>
 <p><img src="/images/2.pic_hd.jpg" alt="2.pic_hd"></p>
 <p>所需插件如下：</p>
 <blockquote>
@@ -381,22 +379,20 @@
 <p>Xcode integration</p>
 <p>Post-Build Script Plug-in</p>
 </blockquote>
-<p>###jenkins配置</p>
-<p>jenkins以及插件都已经安装完成了，那就可以开始愉快的配置jenkins了。jenkins配置其实主要配的就几个点,jenkins从什么地方拉取代码，这个大部分是用git管理了，所以基本填的也应该是git服务器地址咯。然后就是代码拉取下来之后的打包，打完包之后上传指定托管网站。网上的配置方法的不同，大致就是打包使用的方法不同。</p>
+<h2 id="jenkins配置"><a href="#jenkins配置" class="headerlink" title="jenkins配置"></a>jenkins配置</h2><p>jenkins以及插件都已经安装完成了，那就可以开始愉快的配置jenkins了。jenkins配置其实主要配的就几个点,jenkins从什么地方拉取代码，这个大部分是用git管理了，所以基本填的也应该是git服务器地址咯。然后就是代码拉取下来之后的打包，打完包之后上传指定托管网站。网上的配置方法的不同，大致就是打包使用的方法不同。</p>
 <p>因为我准备使用的是上传到fir.im。且fir.im有个插件支持一键打包上传，所以只要在jenkins配置一行命令就能实现打包并上传的流程。so 我选择的是这种方法。</p>
-<p>#####新建项目</p>
-<p>选择New Item -&gt; 填写项目名 -&gt; 选择 Freestyle project -&gt; OK</p>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>选择New Item -&gt; 填写项目名 -&gt; 选择 Freestyle project -&gt; OK</p>
 <p><img src="/images/5.pic_hd.jpg" alt="5.pic_hd"></p>
 <p>创建完项目之后，填写项目名称，描述等等，可以选择性的勾选 GitHub project 填写自己的github仓库地址。这样创建完之后，在侧边会有一个按钮可以直接转跳到github上。</p>
 <p><img src="/images/6.pic_hd.jpg" alt="6.pic_hd"></p>
 <p>可以转跳到指定仓库的按钮</p>
 <p><img src="/images/7.pic.jpg" alt="7.pi"></p>
-<p>#####指定源码地址<br>填完一些基本信息之后，就需要配置源码地址了。因为我是放在github上面托管，所以选择git。然后填上你的仓库地址。如果是公开仓库，其他都选默认就OK了，配置完成。</p>
+<h3 id="指定源码地址"><a href="#指定源码地址" class="headerlink" title="指定源码地址"></a>指定源码地址</h3><p>填完一些基本信息之后，就需要配置源码地址了。因为我是放在github上面托管，所以选择git。然后填上你的仓库地址。如果是公开仓库，其他都选默认就OK了，配置完成。</p>
 <p><img src="/images/8.pic_hd.jpg" alt="8.pic_hd"></p>
 <p>如果是私有仓库，则需要配置证书才能通过验证来拉取代码。点击Add添加。<br>默认选择用户密码验证<br>Username: 用户名<br>Password: 密码<br>ID Description: 填不填无所谓</p>
 <p><img src="/images/10.pic_hd.jpg" alt="10.pic_hd"></p>
-<p>#####触发构建<br>说来惭愧，本来是想配置成 github 每次 commit Jenkins就自动打包上传一次，配置起来出了点小问题，研究一下没弄明白，后面就弃坑了。等什么时候有空了再重新来弄一下。<br>所以就配置了每天早上8点跟晚上7点自动打包上传。这条配置怎么写，点击边上的问号，会有详细的解释。<br><img src="/images/11.pic.jpg" alt="11.pi"></p>
-<p>######打包上传<br>打包上传需要用到fir.im的一个插件<a href="https://github.com/FIRHQ/fir-cli/blob/master/README.md" target="_blank" rel="external">fir-cli</a>.</p>
+<h3 id="触发构建"><a href="#触发构建" class="headerlink" title="触发构建"></a>触发构建</h3><p>说来惭愧，本来是想配置成 github 每次 commit Jenkins就自动打包上传一次，配置起来出了点小问题，研究一下没弄明白，后面就弃坑了。等什么时候有空了再重新来弄一下。<br>所以就配置了每天早上8点跟晚上7点自动打包上传。这条配置怎么写，点击边上的问号，会有详细的解释。<br><img src="/images/11.pic.jpg" alt="11.pi"></p>
+<h3 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h3><p>打包上传需要用到fir.im的一个插件<a href="https://github.com/FIRHQ/fir-cli/blob/master/README.md" target="_blank" rel="external">fir-cli</a>.</p>
 <p>安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install fir-cli</span><br></pre></td></tr></table></figure>
 <p>安装完成后继续配置，选择 Execute shell。</p>
@@ -408,8 +404,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fir build_ipa $&#123;WORKSPACE&#125;/ -w  -S # Schemes # -p -T #API Token#</span><br></pre></td></tr></table></figure>
 <p>增多了两个参数 -w -S ，w表示workspace 默认可以不填，-S 代表 Schemes 。因为使用了cocoapods管理的项目，需要指定 Schemes才能准确通过编译。</p>
 <p>更多的命令解释清参考<a href="https://github.com/FIRHQ/fir-cli/blob/master/README.md" target="_blank" rel="external">fir-cli</a>。</p>
-<p>#####测试</p>
-<p>配置完成，点击立即构建。构建历史可以看到历史的每一次构建。<br><img src="/images/13.pic.jpg" alt="13.pi"></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>配置完成，点击立即构建。构建历史可以看到历史的每一次构建。<br><img src="/images/13.pic.jpg" alt="13.pi"></p>
 <p>点击可以进入查看单次构建详情。</p>
 <p><img src="/images/14.pic_hd.jpg" alt="14.pic_hd"></p>
 <p>点击 console output 可以查看构建的具体情况。</p>
@@ -586,7 +581,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自动集成环境介绍"><span class="nav-number">1.</span> <span class="nav-text">自动集成环境介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jenkins"><span class="nav-number">1.0.1.</span> <span class="nav-text">jenkins</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自动集成环境介绍"><span class="nav-number">1.</span> <span class="nav-text">自动集成环境介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jenkins"><span class="nav-number">1.1.</span> <span class="nav-text">jenkins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">1.2.</span> <span class="nav-text">github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fir-im"><span class="nav-number">1.3.</span> <span class="nav-text">fir.im</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jenkins安装"><span class="nav-number">1.4.</span> <span class="nav-text">jenkins安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件安装"><span class="nav-number">1.5.</span> <span class="nav-text">插件安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jenkins配置"><span class="nav-number">1.6.</span> <span class="nav-text">jenkins配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建项目"><span class="nav-number">1.6.1.</span> <span class="nav-text">新建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定源码地址"><span class="nav-number">1.6.2.</span> <span class="nav-text">指定源码地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#触发构建"><span class="nav-number">1.6.3.</span> <span class="nav-text">触发构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包上传"><span class="nav-number">1.6.4.</span> <span class="nav-text">打包上传</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">1.7.</span> <span class="nav-text">测试</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
