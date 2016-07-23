@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -86,15 +86,28 @@
 
 
 
-<meta name="description" content="Fake it until make it !">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ctf成长之路">
-<meta property="og:url" content="http://blog.ctf826.com/index.html">
+<meta name="description" content="GCDDemo##任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。
+任务同步于异步的区别在于是否会阻塞当前线程。同步任务会阻塞当前线程，直到执行完当前block中的任务。异步任务不会阻塞当前线程，当前线程会继续往下执行。
+###创建任务
+####同步任务：
+123456789101112	dispatch_sync(dispatch_get_main_queue(), ^&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GCD学习笔记">
+<meta property="og:url" content="http://blog.ctf826.com/2016/05/13/GCD/index.html">
 <meta property="og:site_name" content="Ctf成长之路">
-<meta property="og:description" content="Fake it until make it !">
+<meta property="og:description" content="GCDDemo##任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。
+任务同步于异步的区别在于是否会阻塞当前线程。同步任务会阻塞当前线程，直到执行完当前block中的任务。异步任务不会阻塞当前线程，当前线程会继续往下执行。
+###创建任务
+####同步任务：
+123456789101112	dispatch_sync(dispatch_get_main_queue(), ^&amp;">
+<meta property="og:updated_time" content="2016-07-23T07:25:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ctf成长之路">
-<meta name="twitter:description" content="Fake it until make it !">
+<meta name="twitter:title" content="GCD学习笔记">
+<meta name="twitter:description" content="GCDDemo##任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。
+任务同步于异步的区别在于是否会阻塞当前线程。同步任务会阻塞当前线程，直到执行完当前block中的任务。异步任务不会阻塞当前线程，当前线程会继续往下执行。
+###创建任务
+####同步任务：
+123456789101112	dispatch_sync(dispatch_get_main_queue(), ^&amp;">
 
 
 
@@ -115,9 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.ctf826.com/"/>
+  <link rel="canonical" href="http://blog.ctf826.com/2016/05/13/GCD/"/>
 
-  <title> Ctf成长之路 </title>
+  <title> GCD学习笔记 | Ctf成长之路 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,9 +170,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -246,9 +257,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -268,380 +279,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/24/搭建基于jenkins+github+fir.im自动化集成环境/" itemprop="url">
-                  搭建基于jenkins+github+fir.im自动化集成环境
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-24T15:35:03+08:00" content="2016-06-24">
-              2016-06-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/环境配置/" itemprop="url" rel="index">
-                    <span itemprop="name">环境配置</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/24/搭建基于jenkins+github+fir.im自动化集成环境/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/24/搭建基于jenkins+github+fir.im自动化集成环境/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="自动集成环境介绍"><a href="#自动集成环境介绍" class="headerlink" title="自动集成环境介绍"></a>自动集成环境介绍</h1><p>在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。<br>翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/24/搭建基于jenkins+github+fir.im自动化集成环境/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/22/Core Data基本使用/" itemprop="url">
-                  CoreData
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-22T15:42:27+08:00" content="2016-06-22">
-              2016-06-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/22/Core Data基本使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/22/Core Data基本使用/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="什么是Core-Data"><a href="#什么是Core-Data" class="headerlink" title="什么是Core Data"></a>什么是Core Data</h3><p>在我的理解中，Core Data是苹果提供的一套模型缓存框架。该框架是对数据库的进一步封装，让使用者不用编辑复杂的sql语句，以及能使用图形界面来便捷的创建存储模型。(如果理解有误，敬请斧正 谢谢)<br>具体的描述可以参考<a href="http://objccn.io/issue-4-1/">objcn.io</a>以及Core Data<a href="https://developer.apple.com/library/prerelease/content/documentation/Cocoa/Conceptual/CoreData/">官方介绍</a>;<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/22/Core Data基本使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/23/Runtime 基本概念/" itemprop="url">
-                  Runtime 基本概念
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-23T14:35:20+08:00" content="2016-05-23">
-              2016-05-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/23/Runtime 基本概念/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/23/Runtime 基本概念/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>#Runtime</p>
-<p>##objc_msgSend:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id objc_msgSend(id self, SEL op,.....);</span><br></pre></td></tr></table></figure>
-<p>##SEL<br><code>SEL</code>是一个方法选择器，可以用来查找方法。Objc中使用 <code>@selector()</code>,runtime 中使用 <code>sel_registerName</code>来获取<code>SEL</code>类型的方法选择器。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> objc_selector *SEL;</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/23/Runtime 基本概念/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/13/GCD/" itemprop="url">
-                  GCD学习笔记
-                </a>
+                GCD学习笔记
               
             
           </h1>
@@ -707,9 +345,7 @@
       
 
       
-        
-          
-            <h1 id="GCDDemo"><a href="#GCDDemo" class="headerlink" title="GCDDemo"></a>GCDDemo</h1><p>##任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。</p>
+        <h1 id="GCDDemo"><a href="#GCDDemo" class="headerlink" title="GCDDemo"></a>GCDDemo</h1><p>##任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。</p>
 <p>任务同步于异步的区别在于是否会阻塞当前线程。同步任务会阻塞当前线程，直到执行完当前block中的任务。异步任务不会阻塞当前线程，当前线程会继续往下执行。</p>
 <p>###创建任务</p>
 <p>####同步任务：</p>
@@ -781,36 +417,58 @@ dispatch_barrier_async(concurrent, ^{
 </code></pre>
 <p>dispatch_barrier_async会在当线程当前任务完成后阻塞线程，直到block执行完成之后，才能执行后面的任务。<br>dispatch_barrier_sync:等待当前线程的任务全部执行完再阻塞线程，直到block执行完成，才能执行接下来的任务。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/23/Runtime 基本概念/" rel="prev" title="Runtime 基本概念">
+                Runtime 基本概念 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -818,6 +476,14 @@ dispatch_barrier_async(concurrent, ^{
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/13/GCD/"
+           data-title="GCD学习笔记" data-url="http://blog.ctf826.com/2016/05/13/GCD/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -837,8 +503,17 @@ dispatch_barrier_async(concurrent, ^{
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.JPG"
@@ -899,6 +574,17 @@ dispatch_barrier_async(concurrent, ^{
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GCDDemo"><span class="nav-number">1.</span> <span class="nav-text">GCDDemo</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1008,6 +694,10 @@ dispatch_barrier_async(concurrent, ^{
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
