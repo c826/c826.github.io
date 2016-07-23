@@ -86,12 +86,16 @@
 
 
 
-<meta name="description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。">
+<meta name="description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。
+jenkins
+Jenkins是一个用Java编写的开源的持续集成工具。在与Orac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建基于jenkins+github+fir.im自动化集成环境">
 <meta property="og:url" content="http://blog.ctf826.com/2016/06/24/搭建基于jenkins+github+fir.im自动化集成环境/index.html">
 <meta property="og:site_name" content="Ctf成长之路">
-<meta property="og:description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。">
+<meta property="og:description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。
+jenkins
+Jenkins是一个用Java编写的开源的持续集成工具。在与Orac">
 <meta property="og:image" content="http://blog.ctf826.com/images/WeChat_1468899662.jpeg">
 <meta property="og:image" content="http://blog.ctf826.com/images/2.pic_hd.jpg">
 <meta property="og:image" content="http://blog.ctf826.com/images/5.pic_hd.jpg">
@@ -105,10 +109,12 @@
 <meta property="og:image" content="http://blog.ctf826.com/images/14.pic_hd.jpg">
 <meta property="og:image" content="http://blog.ctf826.com/images/15.pic_hd.jpg">
 <meta property="og:image" content="http://blog.ctf826.com/images/16.pic_hd.jpg">
-<meta property="og:updated_time" content="2016-07-23T06:43:59.000Z">
+<meta property="og:updated_time" content="2016-07-23T08:18:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建基于jenkins+github+fir.im自动化集成环境">
-<meta name="twitter:description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。">
+<meta name="twitter:description" content="自动集成环境介绍在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。
+jenkins
+Jenkins是一个用Java编写的开源的持续集成工具。在与Orac">
 <meta name="twitter:image" content="http://blog.ctf826.com/images/WeChat_1468899662.jpeg">
 
 
@@ -347,7 +353,8 @@
       
 
       
-        <h1 id="自动集成环境介绍"><a href="#自动集成环境介绍" class="headerlink" title="自动集成环境介绍"></a>自动集成环境介绍</h1><p>在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。<br>翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。<br><a id="more"></a></p>
+        <a id="more"></a>
+<h1 id="自动集成环境介绍"><a href="#自动集成环境介绍" class="headerlink" title="自动集成环境介绍"></a>自动集成环境介绍</h1><p>在实际开发环境中，出于种种原因，不得不构建一个自动化集成环境来提高效率。网上找了一下资料，发现虽然乍一看方法千千万，但大部分iOS自动集成环境核心都是基于 jenkins 来实现的。<br>翻看了相关的部分资料，最后选择用 jenkins + github + fir.im 来构建自己的自动化继承环境。</p>
 <h2 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h2><blockquote>
 <p>Jenkins是一个用Java编写的开源的持续集成工具。在与Oracle发生争执后，项目从Hudson项目复刻。<br>Jenkins提供了软件开发的持续集成服务。它运行在Servlet容器中（例如Apache Tomcat）。它支持软件配置管理（SCM）工具（包括AccuRev SCM、CVS、Subversion、Git、Perforce、Clearcase和和RTC），可以执行基于Apache Ant和Apache Maven的项目，以及任意的Shell脚本和Windows批处理命令。Jenkins的主要开发者是川口耕介。[2]Jenkins是在MIT许可证下发布的自由软件。[3]<br>可以通过各种手段触发构建。例如提交给版本控制系统时被触发，也可以通过类似Cron的机制调度，也可以在其他的构建已经完成时，还可以通过一个特定的URL进行请求。<br>来源—<a href="https://zh.wikipedia.org/wiki/Jenkins_(软件" target="_blank" rel="external">维基百科</a>)</p>
 </blockquote>
