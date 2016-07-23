@@ -706,7 +706,7 @@
       
         
           <h1 id="GCDDemo"><a href="#GCDDemo" class="headerlink" title="GCDDemo"></a>GCDDemo</h1><h2 id="任务-需要做的事情，一般是block。有异步执行与同步执行两种执行方式。"><a href="#任务-需要做的事情，一般是block。有异步执行与同步执行两种执行方式。" class="headerlink" title="任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。"></a>任务:需要做的事情，一般是block。有异步执行与同步执行两种执行方式。</h2><p>任务同步于异步的区别在于是否会阻塞当前线程。同步任务会阻塞当前线程，直到执行完当前block中的任务。异步任务不会阻塞当前线程，当前线程会继续往下执行。</p>
-<h3 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h3><h4 id="同步任务："><a href="#同步任务：" class="headerlink" title="同步任务："></a>同步任务：</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       <span class="built_in">NSLog</span>(<span class="string">@"sync"</span>);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h3>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/13/GCD/#more" rel="contents">
               阅读全文 &raquo;
