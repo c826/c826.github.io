@@ -89,8 +89,7 @@
 <meta name="description" content="#Runtime
 ##objc_msgSend:
 1id objc_msgSend(id self, SEL op,.....);
-##SELSEL是一个方法选择器，可以用来查找方法。Objc中使用 @selector(),runtime 中使用 sel_registerName来获取SEL类型的方法选择器。
-1typedef struct objc_selector *SEL;">
+##SELSEL是一个方法选择器，可以用来查找方法。Objc中使用 @selector(),runtime 中使用 sel_registerName来获取SEL类型的方法选择器。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Runtime 基本概念">
 <meta property="og:url" content="http://blog.ctf826.com/2016/05/23/Runtime 基本概念/index.html">
@@ -98,16 +97,14 @@
 <meta property="og:description" content="#Runtime
 ##objc_msgSend:
 1id objc_msgSend(id self, SEL op,.....);
-##SELSEL是一个方法选择器，可以用来查找方法。Objc中使用 @selector(),runtime 中使用 sel_registerName来获取SEL类型的方法选择器。
-1typedef struct objc_selector *SEL;">
-<meta property="og:updated_time" content="2016-07-23T08:01:24.000Z">
+##SELSEL是一个方法选择器，可以用来查找方法。Objc中使用 @selector(),runtime 中使用 sel_registerName来获取SEL类型的方法选择器。">
+<meta property="og:updated_time" content="2016-07-23T08:02:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Runtime 基本概念">
 <meta name="twitter:description" content="#Runtime
 ##objc_msgSend:
 1id objc_msgSend(id self, SEL op,.....);
-##SELSEL是一个方法选择器，可以用来查找方法。Objc中使用 @selector(),runtime 中使用 sel_registerName来获取SEL类型的方法选择器。
-1typedef struct objc_selector *SEL;">
+##SELSEL是一个方法选择器，可以用来查找方法。Objc中使用 @selector(),runtime 中使用 sel_registerName来获取SEL类型的方法选择器。">
 
 
 
@@ -349,8 +346,8 @@
 <p>##objc_msgSend:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id objc_msgSend(id self, SEL op,.....);</span><br></pre></td></tr></table></figure>
 <p>##SEL<br><code>SEL</code>是一个方法选择器，可以用来查找方法。Objc中使用 <code>@selector()</code>,runtime 中使用 <code>sel_registerName</code>来获取<code>SEL</code>类型的方法选择器。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> objc_selector *SEL;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> objc_selector *SEL;</span><br></pre></td></tr></table></figure>
 <p>##id<br><code>id</code>是一个指向实例的指针</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> struck objc_object *<span class="keyword">id</span></span><br></pre></td></tr></table></figure>
 <p><code>objc_object</code> 是一个包换 <code>isa</code> 指针的结构体</p>

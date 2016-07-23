@@ -586,7 +586,6 @@
 <p>##objc_msgSend:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id objc_msgSend(id self, SEL op,.....);</span><br></pre></td></tr></table></figure>
 <p>##SEL<br><code>SEL</code>是一个方法选择器，可以用来查找方法。Objc中使用 <code>@selector()</code>,runtime 中使用 <code>sel_registerName</code>来获取<code>SEL</code>类型的方法选择器。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> objc_selector *SEL;</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/23/Runtime 基本概念/#more" rel="contents">
               阅读全文 &raquo;
