@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Ctf成长之路">
 <meta property="og:description" content="Swift – Protocol-Oriented LanguageApple在WWDC2015上发布Swift 2，并宣称其将是 “protocol-oriented programming language“ 。这个声明因为新添加的”protocol extension“特性而变得可能。
 虽然protocol在很早的时候就应用在Swift中，这次声明以及Apple在标准库中大量使用protoc">
-<meta property="og:updated_time" content="2016-09-20T14:28:32.000Z">
+<meta property="og:updated_time" content="2016-09-20T14:29:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Programming">
 <meta name="twitter:description" content="Swift – Protocol-Oriented LanguageApple在WWDC2015上发布Swift 2，并宣称其将是 “protocol-oriented programming language“ 。这个声明因为新添加的”protocol extension“特性而变得可能。
@@ -338,7 +338,7 @@
       
         <h1 id="Swift-–-Protocol-Oriented-Language"><a href="#Swift-–-Protocol-Oriented-Language" class="headerlink" title="Swift – Protocol-Oriented Language"></a>Swift – Protocol-Oriented Language</h1><p>Apple在WWDC2015上发布Swift 2，并宣称其将是 “<strong>protocol-oriented programming language</strong>“ 。这个声明因为新添加的”<strong>protocol extension</strong>“特性而变得可能。</p>
 <p>虽然protocol在很早的时候就应用在Swift中，这次声明以及Apple在标准库中大量使用protocol的修改，会改变我们看到类型的方式。</p>
-<p>简单来说，<em>protocol-oriented programming</em>强调编写协议，而不是特定的类、结构体或者枚举类型。它打破了从前协议的规则并且允许你能在协议中为其编写协议的实现。</p>
+<p>简单来说，<em>protocol-oriented programming</em>强调编写协议，而不是特定的类、结构体或者枚举类型。它打破了从前协议的规则并且允许你能在协议中为其编写协议的实现。<br><a id="more"></a></p>
 <h2 id="Protocol-Extension"><a href="#Protocol-Extension" class="headerlink" title="Protocol Extension"></a>Protocol Extension</h2><p>Extension 可以让你为任意类型添加额外的计算属性与方法。</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">String</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span> <span class="title">shout</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="built_in">print</span> (<span class="keyword">self</span>.uppercaseString)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上面这段代码拓展了String类型，并为其添加了一个额外的方法。你可以拓展系统中的任意类型，包括某些并不是由你编写的类型，并且在一个类型上可以拥有任意数量的拓展。</p>
