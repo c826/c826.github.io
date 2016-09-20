@@ -411,7 +411,7 @@
 <p>这样迫使你去编写实现而不是接口。如果你想要比较两个队伍的record，你所需要关心的是wins和losses。但是使用class，你需要在定义了wins和losses的指定基类上操作。</p>
 <p>我相信你肯定不愿听到如果你突然需要在某些运动上面支持分开wins和losses会发生什么。</p>
 <p>使用协议，你不需要担心指定的类型甚至这个类型是个类或者结构体。所有你需要关心的只是确实存在的公共属性与方法。</p>
-<h2 id="Traits-mixins-and-multiple-inheritance"><a href="#Traits-mixins-and-multiple-inheritance" class="headerlink" title="Traits  mixins and multiple inheritance"></a>Traits  mixins and multiple inheritance</h2><p>说到对某些一次性功能的支持，比如区分胜利和失败，协议的一个真正好处在于它允许某些形式的多重继承。</p>
+<h2 id="Traits-mixins-and-multiple-inheritance"><a href="#Traits-mixins-and-multiple-inheritance" class="headerlink" title="Traits, mixins and multiple inheritance"></a>Traits, mixins and multiple inheritance</h2><p>说到对某些一次性功能的支持，比如区分胜利和失败，协议的一个真正好处在于它允许某些形式的多重继承。</p>
 <p>当新建一个类型，你可以使用协议来为其添加所有你想要的独特的特征。</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">TieableRecord</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ties : <span class="type">Int</span> &#123;<span class="keyword">get</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">DivisionalRecord</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> divisionalWins : <span class="type">Int</span> &#123;<span class="keyword">get</span>&#125;</span><br><span class="line">	<span class="keyword">var</span> divisionalLosses : <span class="type">Int</span> &#123;<span class="keyword">get</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">PointableRecord</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span> <span class="title">totalPoints</span><span class="params">()</span></span> -&gt; <span class="type">Int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">PointableRecord</span> <span class="title">where</span> <span class="title">Self</span> : <span class="title">TieableRecord</span> , <span class="title">TeamRecord</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span> <span class="title">totalPoints</span><span class="params">()</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="number">2</span>*wins) + (<span class="number">1</span>*losses)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">HockeyRecord</span> : <span class="title">TeamRecord</span> , <span class="title">TieableRecord</span> , <span class="title">DivisionalRecord</span> , <span class="title">Equatable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> wins : <span class="type">Int</span></span><br><span class="line">	<span class="keyword">var</span> losses : <span class="type">Int</span></span><br><span class="line">	<span class="keyword">var</span> ties : <span class="type">Int</span></span><br><span class="line">	<span class="keyword">var</span> divisionalWins : <span class="type">Int</span></span><br><span class="line">	<span class="keyword">var</span> divisionalLosses : <span class="type">Int</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">func</span> == <span class="params">(lhs : HockeyRecord , rhs : HockeyRecord)</span></span>() -&gt; <span class="type">Bool</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> lhs.wins == rhs.wins &amp;&amp;</span><br><span class="line">				lhs.losses == rhs.losses &amp;&amp;</span><br><span class="line">				lhs.ties == rhs.ties</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个HockeyRecord是一个TeamRecord类型，同样它也是个TieableRecord类型，它可能追踪分开的wins和losses，可通过 == 来比较。</p>
@@ -425,6 +425,45 @@
 <p>一个类型可以接受了行为数量是不限的。这种方式可以将你的类型用协议来分成小块来定义逻辑。</p>
 <h2 id="Simplicity"><a href="#Simplicity" class="headerlink" title="Simplicity"></a>Simplicity</h2><p>当你编写一个方法来计算胜率的时候，你只需要wins,losses,ties属性。当你编写代码来输出一个人的全名时，你只需要姓和名。</p>
 <p>如果你要在一个更加复杂的对象上完成这些任务时，与不相关的代码连接在一起会很容易出错。</p>
+<p>这个above500属性可能在板球中会需要，但是不是在曲棍球中。然而，这样会让这个方法变成具体的特定运动。你可以看到这个方法的协议拓展有多简单：它只需要处理一次计算。拥有简单的默认实现可以让你在你的类型中在一个地方使用公共代码。</p>
+<p>你不需要知道遵循协议的类型是一个HockeyRecord类型，或者StudentAthlete类型，或者是一个类、结构体或者枚举。因为在协议拓展中的代码只操作协议本身，任何遵循这个协议的类型都会遵循你的代码。</p>
+<p>你会在你的代码生涯中一次又一次的发现，越简单的代码就代表着越少的Bug。</p>
+<h1 id="Why-Swift-is-a-protocol-oriented-language"><a href="#Why-Swift-is-a-protocol-oriented-language" class="headerlink" title="Why Swift is a protocol-oriented language"></a>Why Swift is a protocol-oriented language</h1><p>你已经知道了协议与协议拓展的作用了，但是你可能会想知道：Swift是一个面向协议的语言到底意味着什么？</p>
+<p>协议拓展极大的影响了你编写容易理解并且耦合性低的代码，并且协议拓展启用了很多设计模式这些都映射在Swift语言当中。</p>
+<p>首先，你可以对比面向协议编程与面向对象编程。后者专注于对象的设计与对象的相互作用，所以类是任何面向对象语言的中心。</p>
+<p>虽然类也是Swift的一部分，你会发现在标准库中类只是非常小的一个部分。相反，Swift的主要是由结构体和协议的集合构成。</p>
+<ul>
+<li>Classes: 6 </li>
+<li>Enum: 8 </li>
+<li>Structs: 103 </li>
+<li>Protocol: 86 </li>
+</ul>
+<p>你在许多Swift的核心类型中可以看到这个意义，比如 Int和Array。思考一下下面Array的定义</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">struct</span> <span class="title">Array</span>&lt;<span class="title">Element</span>&gt; : <span class="title">CollectionType</span>, <span class="title">Indexable</span>, <span class="title">SequenceType</span>,</span><br><span class="line"><span class="title">MutableCollectionType</span>, <span class="title">MutableIndexable</span>, <span class="title">_DestructorSafeContainer</span> </span>&#123;</span><br><span class="line">	<span class="comment">// ... </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看出来：</p>
+<ol>
+<li>Array是结构体</li>
+<li>Array遵循很多协议</li>
+</ol>
+<p>Array实际上是结构体意味着它是值类型，当然也意味着它不能被继承也不能是子类。与上面的第二点相联系，Array接受协议来定义许多常见的功能，而不是通过继承自公共基类的行为。</p>
+<p>为什么这是有意义的？它允许Swift为Array添加许多公共的Swift行为。比如，Dictionary和Array都遵循CollectionType协议，但是只有Array遵循MutableInedable协议，以为这它有startIndex和endIndex属性。在另一方面，Dictionary遵循DictionaryLiteralConvertible协议意味着它有键值对。</p>
+<p>这些添加的定义行为允许Array和Dictionary在某些方面相似并且在另一些方面不同。如果Swift使用子类，那Dictionary和Array要么使用同一个基类要么就是完全不同。使用协议和协议拓展，你可以把他们都当成CollectionType来对待。</p>
+<p>以协议为中心的设计，而不是以指定的类，结构体或者枚举为中心，你的代码立即变得更加简洁和低耦合性，因为方法使用很多类型而不是指定的类型。你的代码也会更加具有衔接性，因为操作都是在你正要拓展的协议与协议的约束中的属性和方法上进行的，忽略了任何遵循该协议的类型的内部实现。</p>
+<p>理解面向协议编程是帮助你变成一个更好的Swift开发者的强力技能，并且让你有一个新思路来思考如何来设计你的代码。</p>
+<blockquote>
+<p>Note: 很多的中立Swift开发者会称Swift为”多范式”语言。你已经理解继承和面向对象技术和现在的面向协议编程。Swift将会全部支持这些特性！</p>
+</blockquote>
+<h1 id="Key-points"><a href="#Key-points" class="headerlink" title="Key points"></a>Key points</h1><ul>
+<li><p><em>协议拓展(Protocol extensions)</em>让你可以为协议编写实现代码，甚至可以为协议要求的方法编写默认实现。</p>
+</li>
+<li><p>协议拓展是<em>面向协议编程</em>的主要驱动力，并且可以让你编写的代码可以作用于遵循协议的任意类型。</p>
+</li>
+<li><p>协议拓展的<em>类型约束(Type constraints)</em>提供了额外的场景并且可以让你编写更多的指定实现。</p>
+</li>
+<li><p>你可以使用<em>特性(traits)</em>与<em>混合(mixins)</em>不需要通过继承,就能为一个类型增加额外的行为。</p>
+</li>
+</ul>
+<p>以上内容源自<a href="https://www.raywenderlich.com/store/swift-apprentice" target="_blank" rel="external">Ray Wenderlich</a></p>
 
           
         
